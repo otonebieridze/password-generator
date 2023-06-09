@@ -1,35 +1,56 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="container">
+      <p className="title">Password Generator</p>
+
+      <div className="password-box">
+        <p>P4$5W0rD!</p>
+        <div className="copy-div" />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+
+      <div className="generation-box">
+        <div className="character-length">
+          <h3>Character Length</h3>
+          <h2>0</h2>
+        </div>
+
+        <input type="range" className="range-slider" value={10} min={0} max={20} step={1} />
+
+        <div className="checkboxes">
+          <div>
+            <input type="checkbox" value="uppercase" />
+            <label>Include Uppercase Letters</label>
+          </div>
+          <div>
+            <input type="checkbox" value="lowercase" />
+            <label>Include Lowercase Letters</label>
+          </div>
+          <div>
+            <input type="checkbox" value="numbers" />
+            <label>Include Numbers</label>
+          </div>
+          <div>
+            <input type="checkbox" value="symbols" />
+            <label>Include Symbols</label>
+          </div>
+        </div>
+        
+        <div className="strength-box">
+          <p>STRENGTH</p>
+          <div className="strength-result">
+            <div />
+            <div />
+            <div />
+            <div />
+          </div>
+        </div>
+
+        <button className="generate-btn">GENERATE</button>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
