@@ -6,7 +6,7 @@
 body {
   width: 100%;
   min-height: 100vh;
-  background-color: #18171F;
+  background-color: #18171f;
   display: flex;
   justify-content: center;
 }
@@ -18,10 +18,10 @@ body {
   margin-bottom: 50px;
 }
 .title {
-  color: #817D92;
+  color: #817d92;
   text-align: center;
   font-size: 24px;
-  font-family: 'JetBrains Mono';
+  font-family: cursive;
   font-style: normal;
   font-weight: 700;
   line-height: 32px;
@@ -31,15 +31,15 @@ body {
 .password-box {
   width: 100%;
   height: 60px;
-  background-color: #24232C;
+  background-color: #24232c;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 30px;
 }
 .password-box p {
-  color: #E6E5EA;
-  font-family: 'JetBrains Mono';
+  color: #e6e5ea;
+  font-family: monospace;
   font-style: normal;
   font-weight: 700;
   font-size: 25px;
@@ -52,6 +52,7 @@ body {
   background-image: url("./assets/copy-green.png");
   background-position: center;
   background-repeat: no-repeat;
+  position: relative;
   cursor: pointer;
   margin-right: 30px;
   transition: 0.2s;
@@ -59,11 +60,21 @@ body {
 .password-box .copy-div:hover {
   background-image: url("./assets/copy-white.png");
 }
+.password-box .copy-div .copied {
+  color: #a4ffaf;
+  font-size: 18px;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  opacity: 1;
+  position: absolute;
+  top: 3px;
+  right: 35px;
+}
 
 .generation-box {
   width: 100%;
   min-height: 300px;
-  background-color: #24232C;
+  background-color: #24232c;
   margin-top: 25px;
 }
 .character-length {
@@ -74,16 +85,16 @@ body {
   align-items: center;
 }
 .character-length h3 {
-  color: #E6E5EA;
-  font-family: 'JetBrains Mono';
+  color: #e6e5ea;
+  font-family: sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
   margin-left: 30px;
 }
 .character-length h2 {
-  color: #A4FFAF;
-  font-family: 'JetBrains Mono';
+  color: #a4ffaf;
+  font-family: monospace;
   font-weight: 700;
   font-size: 32px;
   line-height: 42px;
@@ -93,14 +104,14 @@ body {
   appearance: none;
   width: calc(100% - 60px);
   height: 8px;
-  background: linear-gradient(to right, #A4FFAF 0%, #A4FFAF 50%, #18171F 50%, #18171F 100%);
+  border-radius: 10px;
   margin-left: 30px;
 }
 .range-slider::-webkit-slider-thumb {
   appearance: none;
   width: 28px;
   height: 28px;
-  background-color: #E6E5EA;
+  background-color: #e6e5ea;
   border-radius: 50%;
   cursor: pointer;
   transition: 0.5s;
@@ -109,14 +120,18 @@ body {
   appearance: none;
   width: 28px;
   height: 28px;
-  background-color: #E6E5EA;
+  background-color: #e6e5ea;
   border-radius: 50%;
   cursor: pointer;
   transition: 0.5s;
 }
 .range-slider::-webkit-slider-thumb:hover {
-  background-color: #18171F;
-  border: 2px solid #A4FFAF;
+  background-color: #18171f;
+  border: 2px solid #a4ffaf;
+}
+.range-slider::-moz-range-thumb:hover {
+  background-color: #18171f;
+  border: 2px solid #a4ffaf;
 }
 .checkboxes {
   width: calc(100% - 60px);
@@ -135,7 +150,7 @@ body {
   width: 20px;
   height: 20px;
   background-color: transparent;
-  border: 2px solid #E6E5EA;
+  border: 2px solid #e6e5ea;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -143,10 +158,10 @@ body {
   transition: 0.5s;
 }
 .checkboxes div input[type="checkbox"]:hover {
-  border: 2px solid #A4FFAF;
+  border: 2px solid #a4ffaf;
 }
 .checkboxes div input[type="checkbox"]:checked {
-  background-color: #A4FFAF;
+  background-color: #a4ffaf;
   border: none;
 }
 .checkboxes div input[type="checkbox"]:checked::after {
@@ -154,52 +169,63 @@ body {
   font-size: 18px;
 }
 .checkboxes div label {
-  color: #E6E5EA;
-  font-family: 'JetBrains Mono';
+  color: #e6e5ea;
+  font-family: "JetBrains Mono";
   font-size: 18px;
   margin-left: 18px;
 }
 .strength-box {
   width: calc(100% - 60px);
   height: 60px;
-  background-color: #18171F;
+  background-color: #18171f;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-left: 30px;
 }
 .strength-box p {
-  color: #817D92;
+  color: #817d92;
   font-size: 18px;
-  font-family: 'JetBrains Mono';
+  font-family: "JetBrains Mono";
   margin-left: 30px;
 }
 .strength-result {
   display: flex;
+  align-items: center;
   margin-right: 30px;
+}
+.strength-result p {
+  color: #e6e5ea;
+  font-size: 20px;
+  line-height: 32px;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  margin-right: 14px;
 }
 .strength-result div {
   width: 8px;
   height: 23px;
-  border: 2px solid #E6E5EA;
+  border: 2px solid #e6e5ea;
   margin-left: 8px;
 }
 .generate-btn {
   width: calc(100% - 60px);
   height: 50px;
-  background-color: #A4FFAF;
+  background-color: #a4ffaf;
   border: none;
   outline: none;
-  font-family: 'JetBrains Mono';
-  color: #24232C;
-  font-size: 15px;
+  font-family: monospace;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
   text-align: center;
+  color: #24232C;
   cursor: pointer;
   margin: 30px 30px;
   transition: 0.5s;
 }
 .generate-btn:hover {
   background-color: transparent;
-  border: 2px solid #A4FFAF;
-  color: #A4FFAF;
+  border: 2px solid #a4ffaf;
+  color: #a4ffaf;
 }
