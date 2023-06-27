@@ -2,19 +2,10 @@
 
 ### Table of Contents
 
-- [Prerequisites](#Prerequisites)
 - [Technologies Used](#Technologies-Used)
 - [Getting Started](#Getting-Started)
 - [Deployment](#Deployment)
 - [Author](#Author)
-
-#
-
-### Prerequisites
-
-- <img src="readme/npm.png" width="25" style="top: 8px" /> _npm
-- <img src="readme/vite.png" width="25" style="top: 8px" /> _vite
-- <img src="readme/typescript.png" width="25" style="top: 8px" /> _typescript
 
 #
 
